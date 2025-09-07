@@ -4,21 +4,34 @@
 
 A Base Mini App that provides clear, actionable 'Know Your Rights' cards and AI-powered tools for users facing common legal interactions.
 
-## Features
+## 🚀 Features
 
-- **Interactive Rights Cards**: Mobile-first guides for critical legal situations
-- **AI Script Generator**: Personalized communication scripts and checklists
-- **Legal Aid Directory**: Connect with local legal assistance
-- **Multilingual Support**: Rights information in multiple languages
-- **Offline Access**: Download PDFs for offline reference
+### Core Features
+- **Interactive Rights Cards**: Mobile-first, one-page guides with shareable links, offline access, and printable PDFs
+- **AI-Powered Scripts**: Generates tailored scripts and interactive checklists for critical interactions
+- **Legal Aid Integration**: Connects users with verified local legal aid organizations
+- **Multilingual Support**: Rights information available in multiple languages
+- **Localized Content**: Legal information tailored to specific jurisdictions
 
-## Tech Stack
+### Technical Features
+- **Production-Ready**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Base Mini App**: Optimized for Farcaster ecosystem with MiniKit integration
+- **Responsive Design**: Mobile-first approach with desktop optimization
+- **Real-time Data**: React Query for efficient data fetching and caching
+- **Toast Notifications**: User-friendly feedback system
+- **PDF Generation**: On-demand PDF creation for rights cards
+
+## 🛠 Tech Stack
 
 - **Framework**: Next.js 15 with App Router
-- **Blockchain**: Base integration via OnchainKit
-- **AI**: OpenAI/OpenRouter for script generation
+- **Language**: TypeScript
 - **Styling**: Tailwind CSS with custom design system
-- **TypeScript**: Full type safety throughout
+- **State Management**: React Query (TanStack Query)
+- **Database**: Supabase (PostgreSQL)
+- **AI**: OpenAI API via Vercel AI SDK
+- **Blockchain**: Base network integration via OnchainKit
+- **Storage**: IPFS via Pinata for decentralized content
+- **Notifications**: React Hot Toast
 
 ## Getting Started
 
