@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-background text-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface/80 backdrop-blur-sm border border-gray-200/50 shadow-card;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-text px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200;
+  }
+  
+  .rights-card {
+    @apply glass-card p-6 hover:shadow-modal transition-all duration-200 animate-fade-in;
+  }
+  
+  .scenario-button {
+    @apply w-full p-4 text-left bg-surface border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all duration-200;
+  }
+  
+  .fab {
+    @apply fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-modal hover:shadow-lg transition-all duration-200 flex items-center justify-center z-50;
+  }
+}
