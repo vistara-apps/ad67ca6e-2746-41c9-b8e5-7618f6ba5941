@@ -19,7 +19,7 @@ export function AppShell({
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-surface/80 backdrop-blur-sm">
+      <header className="sticky top-0 z-40 w-full border-b border-border/50 bg-surface/80 backdrop-blur-sm">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -27,8 +27,8 @@ export function AppShell({
                 <Shield className="h-6 w-6" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-text">{title}</h1>
-                <p className="text-sm text-muted">Know Your Rights Instantly</p>
+                <h1 className="text-xl font-bold text-foreground">{title}</h1>
+                <p className="text-sm text-muted-foreground">Know Your Rights Instantly</p>
               </div>
             </div>
             
@@ -36,12 +36,12 @@ export function AppShell({
               {showShare && onShare && (
                 <button
                   onClick={onShare}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-text hover:bg-gray-200 transition-colors duration-200"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/20 text-foreground hover:bg-muted/30 transition-colors duration-200"
                 >
                   <Share2 className="h-5 w-5" />
                 </button>
               )}
-              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-text hover:bg-gray-200 transition-colors duration-200">
+              <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/20 text-foreground hover:bg-muted/30 transition-colors duration-200">
                 <Menu className="h-5 w-5" />
               </button>
             </div>
@@ -55,13 +55,13 @@ export function AppShell({
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200/50 bg-surface/50 py-6 mt-12">
+      <footer className="border-t border-border/50 bg-surface/50 py-6 mt-12">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-sm text-muted">
+            <p className="text-sm text-muted-foreground">
               © 2024 RightsGuard AI. Legal information for educational purposes only.
             </p>
-            <p className="text-xs text-muted mt-1">
+            <p className="text-xs text-muted-foreground mt-1">
               Always consult with a qualified attorney for legal advice.
             </p>
           </div>
