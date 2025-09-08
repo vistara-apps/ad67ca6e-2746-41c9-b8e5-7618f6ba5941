@@ -233,74 +233,164 @@ export const mockRightsCards: RightsCard[] = [
 
 export const mockLegalAidOrgs: LegalAidOrg[] = [
   {
-    orgId: '1',
+    id: '1',
     name: 'Legal Aid Society',
-    contactInfo: '1-800-LEGAL-AID (1-800-534-2524)',
+    contactInfo: {
+      phone: '1-800-LEGAL-AID (1-800-534-2524)',
+      email: 'info@legalaid.org',
+      website: 'https://www.legalaid.org',
+      address: '199 Water St, New York, NY 10038'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.legalaid.org'
+    services: ['Housing', 'Immigration', 'Family Law', 'Benefits'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'Income below 125% of federal poverty level',
+    hoursOfOperation: 'Monday-Friday 9AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '2',
+    id: '2',
     name: 'American Civil Liberties Union (ACLU)',
-    contactInfo: '212-549-2500',
+    contactInfo: {
+      phone: '212-549-2500',
+      email: 'info@aclu.org',
+      website: 'https://www.aclu.org',
+      address: '125 Broad St, New York, NY 10004'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.aclu.org'
+    services: ['Civil Rights', 'Criminal Justice', 'Privacy Rights', 'Free Speech'],
+    languages: ['English'],
+    eligibilityRequirements: 'Case-by-case basis',
+    hoursOfOperation: 'Monday-Friday 9AM-6PM',
+    isVerified: true
   },
   {
-    orgId: '3',
+    id: '3',
     name: 'National Employment Law Project',
-    contactInfo: '212-285-3025',
+    contactInfo: {
+      phone: '212-285-3025',
+      email: 'nelp@nelp.org',
+      website: 'https://www.nelp.org',
+      address: '90 Broad St, Suite 1100, New York, NY 10004'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.nelp.org'
+    services: ['Employment Law', 'Wage Theft', 'Worker Rights'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'Low-wage workers',
+    hoursOfOperation: 'Monday-Friday 9AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '4',
+    id: '4',
     name: 'California Rural Legal Assistance',
-    contactInfo: '1-800-337-0690',
+    contactInfo: {
+      phone: '1-800-337-0690',
+      email: 'info@crla.org',
+      website: 'https://www.crla.org',
+      address: '631 Howard St, Suite 300, San Francisco, CA 94105'
+    },
     jurisdiction: 'California',
-    website: 'https://www.crla.org'
+    services: ['Immigration', 'Housing', 'Labor Rights', 'Healthcare'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'Low-income rural residents',
+    hoursOfOperation: 'Monday-Friday 8AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '5',
+    id: '5',
     name: 'Tenants Together',
-    contactInfo: '415-495-8100',
+    contactInfo: {
+      phone: '415-495-8100',
+      email: 'info@tenantstogether.org',
+      website: 'https://www.tenantstogether.org',
+      address: '474 Valencia St, Suite 230, San Francisco, CA 94103'
+    },
     jurisdiction: 'California',
-    website: 'https://www.tenantstogether.org'
+    services: ['Housing Rights', 'Tenant Advocacy', 'Eviction Defense'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'California tenants',
+    hoursOfOperation: 'Monday-Friday 9AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '6',
+    id: '6',
     name: 'New York Legal Assistance Group',
-    contactInfo: '212-613-5000',
+    contactInfo: {
+      phone: '212-613-5000',
+      email: 'info@nylag.org',
+      website: 'https://www.nylag.org',
+      address: '7 Hanover Square, 18th Floor, New York, NY 10004'
+    },
     jurisdiction: 'New York',
-    website: 'https://www.nylag.org'
+    services: ['Immigration', 'Housing', 'Healthcare Access', 'Benefits'],
+    languages: ['English', 'Spanish', 'Chinese', 'Arabic'],
+    eligibilityRequirements: 'Low-income New York residents',
+    hoursOfOperation: 'Monday-Friday 9AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '7',
+    id: '7',
     name: 'Texas RioGrande Legal Aid',
-    contactInfo: '1-888-988-9996',
+    contactInfo: {
+      phone: '1-888-988-9996',
+      email: 'info@trla.org',
+      website: 'https://www.trla.org',
+      address: '4920 N IH-35, Austin, TX 78751'
+    },
     jurisdiction: 'Texas',
-    website: 'https://www.trla.org'
+    services: ['Immigration', 'Housing', 'Family Law', 'Consumer Protection'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'Low-income Texas residents',
+    hoursOfOperation: 'Monday-Friday 8AM-5PM',
+    isVerified: true
   },
   {
-    orgId: '8',
+    id: '8',
     name: 'National Immigration Law Center',
-    contactInfo: '213-639-3900',
+    contactInfo: {
+      phone: '213-639-3900',
+      email: 'info@nilc.org',
+      website: 'https://www.nilc.org',
+      address: '3435 Wilshire Blvd, Suite 108-62, Los Angeles, CA 90010'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.nilc.org'
+    services: ['Immigration Law', 'Policy Advocacy', 'Know Your Rights'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'All immigrants',
+    hoursOfOperation: 'Monday-Friday 9AM-6PM',
+    isVerified: true
   },
   {
-    orgId: '9',
+    id: '9',
     name: 'Consumer Financial Protection Bureau',
-    contactInfo: '1-855-411-2372',
+    contactInfo: {
+      phone: '1-855-411-2372',
+      email: 'info@consumerfinance.gov',
+      website: 'https://www.consumerfinance.gov',
+      address: '1700 G Street NW, Washington, DC 20552'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.consumerfinance.gov'
+    services: ['Consumer Protection', 'Financial Complaints', 'Credit Issues'],
+    languages: ['English', 'Spanish', 'Chinese', 'Vietnamese', 'Korean', 'Tagalog'],
+    eligibilityRequirements: 'All consumers',
+    hoursOfOperation: '24/7 online, phone Monday-Friday 8AM-8PM ET',
+    isVerified: true
   },
   {
-    orgId: '10',
+    id: '10',
     name: 'Equal Employment Opportunity Commission',
-    contactInfo: '1-800-669-4000',
+    contactInfo: {
+      phone: '1-800-669-4000',
+      email: 'info@eeoc.gov',
+      website: 'https://www.eeoc.gov',
+      address: '131 M Street, NE, Washington, DC 20507'
+    },
     jurisdiction: 'Federal (US)',
-    website: 'https://www.eeoc.gov'
+    services: ['Employment Discrimination', 'Workplace Rights', 'Equal Pay'],
+    languages: ['English', 'Spanish'],
+    eligibilityRequirements: 'All workers',
+    hoursOfOperation: 'Monday-Friday 8AM-8PM ET',
+    isVerified: true
   }
 ];
 

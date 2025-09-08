@@ -1,10 +1,10 @@
 'use client';
 
 import { MiniKitProvider } from '@coinbase/onchainkit/minikit';
-import { base } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
+import { base } from 'wagmi/chains';
 import { type ReactNode, useState } from 'react';
 
 export function Providers({ children }: { children: ReactNode }) {
@@ -15,6 +15,7 @@ export function Providers({ children }: { children: ReactNode }) {
           queries: {
             staleTime: 60 * 1000, // 1 minute
             gcTime: 10 * 60 * 1000, // 10 minutes
+            refetchOnWindowFocus: false,
             retry: (failureCount, error: any) => {
               // Don't retry on 4xx errors
               if (error?.status >= 400 && error?.status < 500) {

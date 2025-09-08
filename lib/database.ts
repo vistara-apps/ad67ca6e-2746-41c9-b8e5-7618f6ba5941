@@ -247,11 +247,22 @@ export async function getLegalAidOrgs(jurisdiction?: string): Promise<LegalAidOr
     if (error) throw error;
 
     return data.map(org => ({
-      orgId: org.id,
+      id: org.id,
       name: org.name,
-      contactInfo: org.contact_info,
+      contactInfo: typeof org.contact_info === 'string' 
+        ? {
+            phone: org.contact_info,
+            email: org.email || '',
+            website: org.website || '',
+            address: org.address || ''
+          }
+        : org.contact_info,
       jurisdiction: org.jurisdiction,
-      website: org.website
+      services: org.services || [],
+      languages: org.languages || ['English'],
+      eligibilityRequirements: org.eligibility_requirements || 'Contact for details',
+      hoursOfOperation: org.hours_of_operation || 'Contact for hours',
+      isVerified: org.is_verified || false
     }));
   } catch (error) {
     console.error('Error fetching legal aid organizations:', error);
@@ -259,7 +270,7 @@ export async function getLegalAidOrgs(jurisdiction?: string): Promise<LegalAidOr
   }
 }
 
-export async function createLegalAidOrg(orgData: Omit<LegalAidOrg, 'orgId'>): Promise<LegalAidOrg | null> {
+export async function createLegalAidOrg(orgData: Omit<LegalAidOrg, 'id'>): Promise<LegalAidOrg | null> {
   try {
     const { data, error } = await supabase
       .from('legal_aid_orgs')
@@ -267,7 +278,11 @@ export async function createLegalAidOrg(orgData: Omit<LegalAidOrg, 'orgId'>): Pr
         name: orgData.name,
         contact_info: orgData.contactInfo,
         jurisdiction: orgData.jurisdiction,
-        website: orgData.website
+        services: orgData.services,
+        languages: orgData.languages,
+        eligibility_requirements: orgData.eligibilityRequirements,
+        hours_of_operation: orgData.hoursOfOperation,
+        is_verified: orgData.isVerified
       }])
       .select()
       .single();
@@ -275,11 +290,22 @@ export async function createLegalAidOrg(orgData: Omit<LegalAidOrg, 'orgId'>): Pr
     if (error) throw error;
 
     return {
-      orgId: data.id,
+      id: data.id,
       name: data.name,
-      contactInfo: data.contact_info,
+      contactInfo: typeof data.contact_info === 'string' 
+        ? {
+            phone: data.contact_info,
+            email: data.email || '',
+            website: data.website || '',
+            address: data.address || ''
+          }
+        : data.contact_info,
       jurisdiction: data.jurisdiction,
-      website: data.website
+      services: data.services || [],
+      languages: data.languages || ['English'],
+      eligibilityRequirements: data.eligibility_requirements || 'Contact for details',
+      hoursOfOperation: data.hours_of_operation || 'Contact for hours',
+      isVerified: data.is_verified || false
     };
   } catch (error) {
     console.error('Error creating legal aid organization:', error);
@@ -390,11 +416,22 @@ export async function getOfflineData(): Promise<{
     })) || [];
 
     const legalAidOrgs = orgsResponse.data?.map(org => ({
-      orgId: org.id,
+      id: org.id,
       name: org.name,
-      contactInfo: org.contact_info,
+      contactInfo: typeof org.contact_info === 'string' 
+        ? {
+            phone: org.contact_info,
+            email: org.email || '',
+            website: org.website || '',
+            address: org.address || ''
+          }
+        : org.contact_info,
       jurisdiction: org.jurisdiction,
-      website: org.website
+      services: org.services || [],
+      languages: org.languages || ['English'],
+      eligibilityRequirements: org.eligibility_requirements || 'Contact for details',
+      hoursOfOperation: org.hours_of_operation || 'Contact for hours',
+      isVerified: org.is_verified || false
     })) || [];
 
     return { cards, legalAidOrgs };

@@ -30,11 +30,20 @@ export interface Script {
 }
 
 export interface LegalAidOrg {
-  orgId: string;
+  id: string;
   name: string;
-  contactInfo: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
   jurisdiction: string;
-  website?: string;
+  services: string[];
+  languages: string[];
+  eligibilityRequirements: string;
+  hoursOfOperation: string;
+  isVerified: boolean;
 }
 
 export interface ScenarioCategory {
