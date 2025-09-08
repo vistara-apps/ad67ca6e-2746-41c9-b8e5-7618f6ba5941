@@ -3,6 +3,72 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+    --primary: 59 130 246;
+    --primary-50: 239 246 255;
+    --primary-100: 219 234 254;
+    --primary-200: 191 219 254;
+    --primary-300: 147 197 253;
+    --primary-400: 96 165 250;
+    --primary-500: 59 130 246;
+    --primary-600: 37 99 235;
+    --primary-700: 29 78 216;
+    --primary-800: 30 64 175;
+    --primary-900: 30 58 138;
+    --primary-950: 23 37 84;
+    --secondary: 100 116 139;
+    --secondary-50: 248 250 252;
+    --secondary-100: 241 245 249;
+    --secondary-200: 226 232 240;
+    --secondary-300: 203 213 225;
+    --secondary-400: 148 163 184;
+    --secondary-500: 100 116 139;
+    --secondary-600: 71 85 105;
+    --secondary-700: 51 65 85;
+    --secondary-800: 30 41 59;
+    --secondary-900: 15 23 42;
+    --secondary-950: 2 6 23;
+    --accent: 34 197 94;
+    --accent-50: 240 253 244;
+    --accent-100: 220 252 231;
+    --accent-200: 187 247 208;
+    --accent-300: 134 239 172;
+    --accent-400: 74 222 128;
+    --accent-500: 34 197 94;
+    --accent-600: 22 163 74;
+    --accent-700: 21 128 61;
+    --accent-800: 22 101 52;
+    --accent-900: 20 83 45;
+    --accent-950: 5 46 22;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 59 130 246;
+    --radius: 0.5rem;
+    --chart-1: 220 38 127;
+    --chart-2: 59 130 246;
+    --chart-3: 34 197 94;
+    --chart-4: 251 191 36;
+    --chart-5: 239 68 68;
+    
+    /* Custom app colors */
+    --text: 15 23 42;
+    --surface: 255 255 255;
+  }
+
+  .dark {
+    --background: 2 6 23;
+    --foreground: 248 250 252;
+    --primary: 96 165 250;
+    --text: 248 250 252;
+    --surface: 15 23 42;
+  }
+
   * {
     @apply border-gray-200;
   }
@@ -10,6 +76,8 @@
   body {
     @apply bg-background text-text;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: rgb(var(--background));
+    color: rgb(var(--text));
   }
 }
 
