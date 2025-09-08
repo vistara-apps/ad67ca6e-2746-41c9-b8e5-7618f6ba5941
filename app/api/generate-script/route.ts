@@ -2,12 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { AIScriptRequest } from '@/lib/types';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || process.env.OPENROUTER_API_KEY,
-  baseURL: process.env.OPENAI_API_KEY ? undefined : "https://openrouter.ai/api/v1",
-  dangerouslyAllowBrowser: true,
-});
-
 export async function POST(request: NextRequest) {
   try {
     const body: AIScriptRequest = await request.json();
@@ -19,6 +13,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Initialize OpenAI client inside the function to avoid build-time errors
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY || process.env.OPENROUTER_API_KEY,
+      baseURL: process.env.OPENAI_API_KEY ? undefined : "https://openrouter.ai/api/v1",
+      dangerouslyAllowBrowser: true,
+    });
 
     let prompt = '';
     
