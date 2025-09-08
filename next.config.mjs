@@ -6,6 +6,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  experimental: {
+    workerThreads: false,
+  },
+  compiler: {
+    removeConsole: false,
+  },
 };
 
 export default nextConfig;
