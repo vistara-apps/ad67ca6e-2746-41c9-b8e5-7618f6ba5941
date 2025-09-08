@@ -2691,7 +2691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
+"@typescript-eslint/eslint-plugin@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/eslint-plugin@npm:^8.42.0":
   version: 8.42.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.42.0"
   dependencies:
@@ -2712,7 +2712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
+"@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/parser@npm:^8.42.0":
   version: 8.42.0
   resolution: "@typescript-eslint/parser@npm:8.42.0"
   dependencies:
@@ -6678,9 +6678,9 @@ __metadata:
   linkType: hard
 
 "is-arrayish@npm:^0.3.1":
-  version: 0.3.3
-  resolution: "is-arrayish@npm:0.3.3"
-  checksum: 10c0/46421008b4e5ad2a4ee6b6f88a5453a8ea159c095e12d26cce3081d3f1213592ae81d319d1ab7ef07590dfad86b019463cba0708d8da4157f50a52566f0706e8
+  version: 0.3.2
+  resolution: "is-arrayish@npm:0.3.2"
+  checksum: 10c0/f59b43dc1d129edb6f0e282595e56477f98c40278a2acdc8b0a5c57097c9eff8fe55470493df5775478cf32a4dc8eaf6d3a749f07ceee5bc263a78b2434f6a54
   languageName: node
   linkType: hard
 
@@ -9732,6 +9732,8 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@typescript-eslint/eslint-plugin": "npm:^8.42.0"
+    "@typescript-eslint/parser": "npm:^8.42.0"
     "@upstash/redis": "npm:^1.34.4"
     ai: "npm:^3.4.32"
     autoprefixer: "npm:^10.4.0"
